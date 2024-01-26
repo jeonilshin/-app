@@ -2,7 +2,7 @@
 ```python
 import requests
 from bs4 import BeautifulSoup
-from flask import Flask
+from flask import Flask, Response
 
 schoolURL = "https://school.busanedu.net/daeyang-h/main.do"
 
@@ -18,10 +18,10 @@ app = Flask(__name__)
 def main():
     try:
         meal = getMeal()
-        return meal
+        return "\n" + meal + "\n" + "\n"
     except Exception as e:
         print(e)
-        return "<h1>오류가 발생하였습니다.</h1><h2>API 콘솔을 확인하여 주시기 바랍니다.</h2>", 500 
+        return "<h1>오류가 발생하였습니다.</h1><h2>API 콘솔을 확인하여 주시기 바랍니다.</h2>", 500
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
