@@ -26,3 +26,8 @@ def main():
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
 ```
+
+# How to Run?
+
+https://github.com/jeonilshin/daeyang-lunch-api/assets/86287920/f65c58cb-7f43-42ef-9ad5-d5bb14279acd
+
